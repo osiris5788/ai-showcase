@@ -1,0 +1,106 @@
+/* This file contains global CSS styles for the application, including styles for dark mode. */
+
+/* Global CSS styles with Sogeti brand colors */
+
+:root {
+    --sogeti-primary: #0070AD;
+    --sogeti-secondary: #12ABDB;
+    --sogeti-accent: #FF4019;
+    --background-color: #ffffff;
+    --text-color: #000000;
+}
+
+[data-theme='dark'] {
+    --background-color: #1a1a1a;
+    --text-color: #ffffff;
+    /* Adjust brand colors for dark mode to maintain contrast */
+    --sogeti-primary: #12ABDB;
+    --sogeti-secondary: #0070AD;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+}
+
+.layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: var(--sogeti-primary);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+}
+
+nav {
+    background-color: var(--sogeti-secondary);
+    padding: 0.5rem 1rem;
+}
+
+nav a {
+    color: white;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--sogeti-accent);
+    text-decoration: none;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    color: var(--sogeti-primary);
+}
+
+a {
+    color: var(--sogeti-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--sogeti-accent);
+    text-decoration: none;
+}
+
+footer {
+    background-color: var(--sogeti-primary);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+button {
+    background-color: var(--sogeti-secondary);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--sogeti-accent);
+}
