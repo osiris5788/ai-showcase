@@ -31,5 +31,47 @@
     "@typescript-eslint/parser": "^6.0.0",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "prettier": "^3.0.0"
+  },
+  "components": {
+    "Midjourney": {
+      "description": "Midjourney Showcase - Explore Midjourney AI image generation for creative visuals and concept art.",
+      "demos": "Add interactive demos or examples here"
+    }
+  },
+  "page": {
+    "component": "MidjourneyPage",
+    "title": "Midjourney",
+    "description": "Midjourney is an AI-driven image generation system that turns textual prompts into visuals, useful for concept art, ideation and visual prototyping.",
+    "commonUses": [
+      "Creative concept art and illustrations",
+      "Visual prototyping and moodboards",
+      "Artistic style exploration"
+    ],
+    "navigation": [
+      { "href": "/", "label": "Showroom" },
+      { "href": "/services/chatgpt", "label": "ChatGPT" },
+      { "href": "/services/suno", "label": "Suno" },
+      { "href": "/services/sora", "label": "Sora 2" },
+      { "href": "/services/midjourney", "label": "Midjourney" }
+    ]
+  },
+  "app": {
+    "page": {
+      "component": "MidjourneyPage",
+      "title": "Midjourney",
+      "description": "Midjourney is an AI-driven image generation system that turns textual prompts into visuals, useful for concept art, ideation and visual prototyping.",
+      "commonUses": [
+        "Creative concept art and illustrations",
+        "Visual prototyping and moodboards",
+        "Artistic style exploration"
+      ],
+      "navigation": [
+        { "href": "/", "label": "Showroom" },
+        { "href": "/services/chatgpt", "label": "ChatGPT" },
+        { "href": "/services/suno", "label": "Suno" },
+        { "href": "/services/sora", "label": "Sora 2" },
+        { "href": "/services/midjourney", "label": "Midjourney" }
+      ]
+    }
   }
 }

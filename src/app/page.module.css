@@ -1,0 +1,64 @@
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding: 1rem;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel > * {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+}
+
+.carouselText {
+    text-align: center;
+    margin: 2rem 0;
+    color: var(--sogeti-primary);
+}
+
+/* Mobile responsive layout */
+@media (max-width: 968px) {
+    .carousel {
+        flex-wrap: wrap;
+    }
+    
+    .card {
+        width: calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        flex-direction: column;
+        align-items: center;
+        overflow-y: auto;
+        overflow-x: hidden;
+        scroll-snap-type: y mandatory;
+    }
+    
+    .carousel > * {
+        width: 90%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .carousel {
+        flex-direction: column;
+    }
+    
+    .card {
+        width: 100%;
+    }
+}

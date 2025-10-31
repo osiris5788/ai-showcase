@@ -5,13 +5,12 @@ import ThemeToggle from '../Theme/ThemeToggle';
 const Header: React.FC = () => {
     return (
         <header>
-            <Image
-                src="/images/sogeti-logo-png.png"
+            <img
+                src="/images/Sogeti_Logo_Primary_2COL_RGB.png"
                 alt="Sogeti Logo"
-                width={120}
-                height={40}
                 className="logo"
-                // removed priority to avoid preload warning
+                width={104} // Changed from 600 to 200
+                height={40} // Changed from 350 to 116 to maintain aspect ratio
             />
             <nav>
                 <ThemeToggle />

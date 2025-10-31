@@ -1,0 +1,68 @@
+.nav {
+    background-color: var(--sogeti-secondary);
+    padding: 0.5rem 1rem;
+    position: relative;
+    z-index:6;
+}
+
+.menuItems {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.menuItems a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.menuItems a:hover {
+    color: var(--sogeti-accent);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .menuItems {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: var(--sogeti-secondary);
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .menuItems.isOpen {
+        display: flex;
+    }
+
+    .menuItems a {
+        width: 100%;
+        text-align: center;
+    }
+}

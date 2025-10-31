@@ -1,0 +1,49 @@
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 1rem;
+    margin: 0.5rem;
+    width: 300px;  /* Fixed width instead of percentage */
+    flex: 0 0 auto; /* Prevent flexbox from shrinking/growing */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.imageWrapper {
+    width: 100%;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .image {
+    transform: scale(1.05);
+}
+
+.title {
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+}
+
+.description {
+    font-size: 0.875rem;
+    margin: 0.5rem 0;
+    color: #666;
+}
+
+.content {
+    margin-top: 0.5rem;
+    flex: 1;
+}

@@ -1,0 +1,36 @@
+.wrapper {
+    perspective: 1000px;
+    display: inline-block;
+    border-radius: 8px;
+    position: relative;
+}
+
+.wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--sogeti-accent);
+    opacity: 0.25;
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.wrapper:hover::before {
+    opacity: 0.4;
+}
+
+.img {
+    display: block;
+    border-radius: 8px;
+    transition: transform 240ms ease, box-shadow 240ms ease;
+    transform-origin: center;
+    will-change: transform;
+    user-select: none;
+    -webkit-user-drag: none;
+    position: relative;
+    z-index: 2;
+}

@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///C:/Dev/ai-showroom/src/components/Theme/ThemeToggle.tsx"],"sourcesContent":["'use client'\nimport React from 'react';\n\nconst ThemeToggle: React.FC = () => {\n    const [isDarkMode, setIsDarkMode] = React.useState<boolean>(false);\n\n    const toggleTheme = () => {\n        setIsDarkMode(prevMode => !prevMode);\n        document.body.classList.toggle('dark-mode', !isDarkMode);\n    };\n\n    return (\n        <button onClick={toggleTheme} aria-label=\"Toggle theme\">\n            {isDarkMode ? 'Light Mode' : 'Dark Mode'}\n        </button>\n    );\n};\n\nexport default ThemeToggle;"],"names":[],"mappings":";;;;;AACA;AADA;;;AAGA,MAAM,cAAwB;IAC1B,MAAM,CAAC,YAAY,cAAc,GAAG,gNAAK,CAAC,QAAQ,CAAU;IAE5D,MAAM,cAAc;QAChB,cAAc,CAAA,WAAY,CAAC;QAC3B,SAAS,IAAI,CAAC,SAAS,CAAC,MAAM,CAAC,aAAa,CAAC;IACjD;IAEA,qBACI,8OAAC;QAAO,SAAS;QAAa,cAAW;kBACpC,aAAa,eAAe;;;;;;AAGzC;uCAEe","debugId":null}}]
-}

@@ -1,19 +1,22 @@
-'use client'
-import React from 'react';
+'use client';
+import React, { useEffect, useState } from 'react';
 
-const ThemeToggle: React.FC = () => {
-    const [isDarkMode, setIsDarkMode] = React.useState<boolean>(false);
+export default function ThemeToggle() {
+    const [isDark, setIsDark] = useState(false);
 
-    const toggleTheme = () => {
-        setIsDarkMode(prevMode => !prevMode);
-        document.body.classList.toggle('dark-mode', !isDarkMode);
+    useEffect(() => {
+        // initialize from saved preference (optional)
+        const saved = localStorage.getItem('theme') === 'dark';
+        setIsDark(saved);
+        document.documentElement.setAttribute('data-theme', saved ? 'dark' : 'light');
+    }, []);
+
+    const toggle = () => {
+        const next = !isDark;
+        setIsDark(next);
+        localStorage.setItem('theme', next ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', next ? 'dark' : 'light');
     };
 
-    return (
-        <button onClick={toggleTheme} aria-label="Toggle theme">
-            {isDarkMode ? 'Light Mode' : 'Dark Mode'}
-        </button>
-    );
-};
-
-export default ThemeToggle;
+    return <button onClick={toggle}>{isDark ? 'Dark' : 'Light'}</button>;
+}

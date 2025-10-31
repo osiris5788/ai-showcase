@@ -1,26 +1,30 @@
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
 import Link from 'next/link';
+import styles from './Navigation.module.css';
 
-const Navigation: React.FC = () => {
+const Navigation = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
-        <nav>
-            <ul>
-                <li>
-                    <Link href="/">Home</Link>
-                </li>
-                <li>
-                    <Link href="/chatgpt">ChatGPT</Link>
-                </li>
-                <li>
-                    <Link href="/suno">Suno</Link>
-                </li>
-                <li>
-                    <Link href="/sora">Sora 2</Link>
-                </li>
-                <li>
-                    <Link href="/about">About</Link>
-                </li>
-            </ul>
+        <nav className={styles.nav}>
+            <button 
+                className={styles.hamburger}
+                onClick={() => setIsOpen(!isOpen)}
+                aria-label="Toggle menu"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div className={`${styles.menuItems} ${isOpen ? styles.isOpen : ''}`}>
+                <Link href="/">Home</Link>
+                <Link href="/services/chatgpt">ChatGPT</Link>
+                <Link href="/services/suno">Suno</Link>
+                <Link href="/services/sora">Sora 2</Link>
+                <Link href="/services/midjourney">Midjourney</Link>
+            </div>
         </nav>
     );
 };
