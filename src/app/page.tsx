@@ -6,6 +6,7 @@ import Card from '../components/UI/Card';
 import ChatGPT from '../components/AI/ChatGPT';
 import Suno from '../components/AI/Suno';
 import Sora from '../components/AI/Sora';
+import Midjourney from '../components/AI/Midjourney';
 import styles from './page.module.css';
 
 const aiServices = [
@@ -29,6 +30,13 @@ const aiServices = [
         component: Sora,
         image: '/images/sora.png',
         href: '/services/sora'
+    },
+    {
+        title: 'Midjourney',
+        description: 'AI-powered image generation and artistic creation',
+        component: Midjourney,
+        image: '/images/midjourney.png',
+        href: '/services/midjourney'
     }
 ];
 

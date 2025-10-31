@@ -31,7 +31,7 @@ export default function Page(): JSX.Element {
             </ul>
 
             <nav style={{ display: 'flex', gap: 12, marginTop: 32, flexWrap: 'wrap' }}>
-                <Link href="/">Showroom</Link>
+                <Link href="/">Home</Link>
                 <Link href="/services/chatgpt">ChatGPT</Link>
                 <Link href="/services/suno">Suno</Link>
                 <Link href="/services/sora">Sora 2</Link>
